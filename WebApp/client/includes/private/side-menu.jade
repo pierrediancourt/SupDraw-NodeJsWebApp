@@ -1,0 +1,23 @@
+a.menu-link#menuLink(href="#menu")
+	span
+
+div#menu
+	div.pure-menu.pure-menu-open
+		a.pure-menu-heading(href="/") SupDraw
+
+		ul
+			if !loggued
+				li
+					a(href="login") Login
+				li
+					a(href="register") Register
+			else
+				li
+					a(href="selectionRoom") Selection Room
+				li.menu-item-divided
+					a(href="profile") Profile
+				li
+					a(href="disconnect") Disconnect
+
+			li.menu-item-divided
+				a(href="ladder") Ladder

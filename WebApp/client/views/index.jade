@@ -1,0 +1,25 @@
+doctype
+
+html(lang="fr")
+	head
+		include ../includes/private/dependencies
+		title Index page
+	body
+		div#layout
+			include ../includes/private/side-menu
+		
+			div#main
+				div.header
+					h1 SupDraw
+					h2 The online pictionary-style game
+
+				div.content
+					h2.content-subhead This is a multiplayer game as you never saw before
+					p.
+						Easy to play, just guess what is drawn by your friends or strangers in a specified amount of time.
+						<br>
+						When a player reaches ten points, the game is over.
+							
+					include ../includes/private/alert-box
+					
+		script(src="/public/js/ui.js", type="text/javascript")

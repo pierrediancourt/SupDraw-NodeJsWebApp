@@ -1,0 +1,33 @@
+doctype
+
+html(lang="fr")
+	head
+		include ../includes/private/dependencies
+		title Login page
+	body
+		div#layout
+			include ../includes/private/side-menu
+
+			div#main
+				div.header
+					h1 Meet your friends
+					h2 And let's get fun !
+
+				div.content
+					h2.content-subhead Just log in and you're ready
+					p.
+						I'm sure the community have missed your drawing skills, let's show them your superiority now.
+
+					form.pure-form(name="login" action="/login", method="post")
+						fieldset
+							legend There your can log in
+
+							input(type="text", name="username", placeholder="Username")
+							<br>
+							input(type="text", name="password", placeholder="Password")
+							<br>
+							button.pure-button.pure-button-primary(type="submit") Log in
+
+					include ../includes/private/alert-box
+					
+		script(src="/public/js/ui.js", type="text/javascript")
