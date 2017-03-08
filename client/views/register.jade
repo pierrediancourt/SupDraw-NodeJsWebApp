@@ -1,0 +1,30 @@
+//- login.jade
+extends ./layout
+
+block title
+	title Login page
+
+block header
+	h1 Create an account
+	h2 And let's jump in !
+
+block content
+	h2.content-subhead Fast registration on the go
+	p.
+		No email, no boring questions, just the minimal stuff !
+
+	form.pure-form(name="register" action="/register", method="post")
+		fieldset
+			legend There your can create an account
+
+			input(type="text", name="username", placeholder="Username")
+			<br>
+			input(type="password", name="password1", placeholder="Password")
+			<br>
+			input(type="password", name="password2", placeholder="Password")
+			<br>
+			select(name="language")
+				for item in languages
+					option(value="#{item}") #{item}
+			<br>
+			button.pure-button.pure-button-primary(type="submit") Register now

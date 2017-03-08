@@ -1,0 +1,53 @@
+///// REQUIREMENTS /////
+
+- Windows 10 with build number equal or above 14393
+- 2 minutes and a reboot
+
+
+///// DEPENDENCIES /////
+
+All dependencies will be dynamically installed by using the script installAll.bat
+You will only have to select the Developer Mode radio button by following these instructions :
+- On you windows, open "Settings"
+- Go to "Update and Security" 
+- Go to "For developers"
+- Check the "Developer Mode" radio button
+(official link : https://msdn.microsoft.com/fr-fr/commandline/wsl/install_guide)
+
+Here is the list of things that will happend during its execution :
+- Installation of the "windows subsystem for linux"
+	This will be done automatically by a powershell command so you shouldn't have to follow the following links for the manual installation process :
+	EN : https://ppolyzos.com/2016/08/03/install-and-change-default-language-on-bash-on-ubuntu-on-windows/
+	FR : https://korben.info/installer-shell-bash-linux-windows-10.html
+- Installation of the package mongodb on the ubuntu subsystem in your windows
+- Installation of the node-v6.10.0-x64.msi file
+
+
+///// HOW TO RUN /////
+
+Just double click the runAll.bat script
+If your system is alright about the dependencies things should run smoothly
+
+Your mongodb instance is now reachable from your windows system on localhost:27017 (default port)
+Your node project is now running in development mode and reachable on http://localhost:80 (port in configuration.js in the globals folder)
+
+
+///// OPTIONAL /////
+
+If you want your default logged ubuntu user to be the root one when executing the bash command in a cmd.exe (which is done by the .bat scripts provided) so that you don't have to enter your password everytime, follow these instructions :
+- Open a new cmd.exe
+- Execute "lxrun /setdefaultuser root /y"
+
+If you choose to run the script installTools.bat
+Here is the list of things that will happend during its execution
+- Installation of the robomongo-1.0.0-rc1-windows-x86_64-496f5c2.exe file
+
+
+///// DEBUG /////
+
+If you see these warnings :
+
+"npm WARN optional Skipping failed optional dependency /chokidar/fsevents:"
+"npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.1.1"
+
+You can just ignore them.

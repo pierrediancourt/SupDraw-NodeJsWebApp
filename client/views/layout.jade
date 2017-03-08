@@ -1,0 +1,25 @@
+//- layout.jade
+doctype html
+html(lang="en")
+	head
+		block title
+			title Supdraw //- default title if block title not supplied
+		include ../includes/private/theme
+	body
+		div#layout
+			include ../includes/private/side-menu
+
+			div#main
+				div.header
+					block header
+					include ../includes/private/alert-box
+				div.content
+					block content
+					block footer
+					footer
+						<br>
+						<br>
+						span Copyright &copy; #{new Date().getFullYear()} Pierre Diancourt
+
+		script(src="/public/js/vendor/ui.js", type="text/javascript")
+		block javascript

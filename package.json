@@ -1,0 +1,29 @@
+{
+  "name": "SupDrawProject",
+  "version": "0.1.0",
+  "description": "This is an online multiplayer Pictionary-like WebApp i developped in NodeJs as a school project",
+  "main": "index.js",
+  "scripts": {
+    "start-production": "pm2 start index.js --node-args='--harmony --use-strict'",
+    "start": "nodemon --harmony ./index.js"
+  },
+  "author": "https://github.com/pierrediancourt",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
+    "jade": "^1.11.0",
+    "mongodb": "^2.2.24",
+    "mongoose": "^4.8.6",
+    "require-dir": "^0.3.1",
+    "serve-favicon": "^2.4.1",
+    "socket.io": "^1.7.3",
+    "websocket": "^1.0.24"
+  },
+  "devDependencies": {
+    "nodemon": "^1.7.1"
+  }
+}
